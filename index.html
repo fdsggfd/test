@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            display: flex;
+            width: 100%;
+        }
+        #tools {
+            flex: 1;
+            background: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #tools h2 {
+            font-size: 21px; /* Adjust the font size as needed */
+        }
+        #content {
+            flex: 2;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        iframe {
+            width: 100%; /* Adjust the width as needed */
+            height: 400px; /* Adjust the height as needed */
+            border: none;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="tools">
+            <h2>Tools</h2>
+            <button onclick="loadPage('https://b06a-18-215-174-126.ngrok-free.app/')">Email2Socials</button>
+            <button onclick="loadPage('https://9a1e-18-215-174-126.ngrok-free.app/app.html')">Username Finder V1</button>
+            <button onclick="loadPage('https://digihubmarket.netlify.app/')">Website Checker</button>
+            <button onclick="loadPage('https://fdsggfd.github.io/phone-carrier-lookup/phone.html')">Phone Carrier</button>
+            <button onclick="loadPage('https://fdsggfd.github.io/ip-finder/ip.html')">IP Check</button>
+            <button onclick="loadPage('https://whatsapp.checkleaked.cc/')">Whatsapp Info</button>
+            <button onclick="loadPage('https://blackbird-osint.herokuapp.com/')">Username Finder V2</button>
+        </div>
+        <div id="content">
+            <!-- Content will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        function loadPage(url) {
+            // Use JavaScript to set the iframe source
+            document.getElementById('content').innerHTML = '<iframe src="embed.php?url=' + encodeURIComponent(url) + '" scrolling="auto"></iframe>';
+        }
+    </script>
+</body>
+</html>
